@@ -289,3 +289,6 @@
 2018-02-06 17:09:55,019 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Andy\my_git_repos\StagingProjects\dnd5sim\src\test\resources
 2018-02-07 10:02:39,764 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-02-07 10:02:39,764 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2018-02-07 10:02:39,780 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-02-07 10:02:39,780 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-02-07 10:02:39,780 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Andy\my_git_repos\StagingProjects\dnd5sim\src\test\resources
