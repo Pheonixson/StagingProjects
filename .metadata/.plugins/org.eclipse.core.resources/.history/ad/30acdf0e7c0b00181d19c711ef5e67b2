@@ -1,0 +1,13 @@
+package com.nix.dnd5sim.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.nix.dnd5sim.entities.TestNpc;
+
+@Repository
+public interface TestNpcDao extends JpaRepository<TestNpc, Integer> {
+	
+	TestNpc findTestNPCById(Integer id);
+	
+}

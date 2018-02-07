@@ -1,0 +1,44 @@
+package com.nix.dnd5sim.controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.nix.dnd5sim.entities.TestNpc;
+import com.nix.dnd5sim.services.TestClassService;
+
+@RestController
+public class TestController {
+	
+	private List<TestNpc> npcList = new ArrayList<>();
+	
+	@Autowired
+	private TestClassService service;
+	
+	public TestController() {
+		npcList.add(new TestNpc(1, "Tod", 13));
+		npcList.add(new TestNpc(2, "Hanz", 51));
+		npcList.add(new TestNpc(3, "Jile", 6));
+		npcList.add(new TestNpc(4, "Lara", 75));
+		npcList.add(new TestNpc(5, "Mireen", 23));
+	}
+	
+//	@GetMapping("{id}")
+//	public TestNPC findById(@PathVariable int id) {
+//		return npcList.parallelStream().filter(cust -> cust.getId() == id).findFirst().get();		
+//	}
+	
+	@GetMapping("{id}")
+	public TestNpc getById(@PathVariable int id) {
+		return service.getNpcList().parallelStream().filter(cust -> cust.getId() == id).findFirst().get();		
+	}
+	
+	public List<TestNpc> getAll(){
+		return service.getNpcList();
+	}
+
+}

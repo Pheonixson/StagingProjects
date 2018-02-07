@@ -1,0 +1,13 @@
+package com.nix.dnd5sim.entities;
+
+public class TestNPC {
+	
+	private Integer id;
+	private String name; 
+	private int money;
+	
+	public TestNPC() {
+		super();
+	}
+
+}

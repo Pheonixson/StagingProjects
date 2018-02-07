@@ -1,0 +1,5 @@
+package com.nix.dnd5sim.entities;
+
+public class TestNPC {
+
+}

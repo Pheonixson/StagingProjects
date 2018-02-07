@@ -1,0 +1,36 @@
+package com.nix.dnd5sim.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.stereotype.Service;
+
+import com.nix.dnd5sim.entities.TestNPC;
+
+@Service
+@Transactional
+public class TestClassService {
+	
+	private List<TestNPC> npcList = new ArrayList<>();
+
+	public TestClassService() {
+		npcList.add(new TestNPC(1, "Tod", 13));
+		npcList.add(new TestNPC(2, "Hanz", 51));
+		npcList.add(new TestNPC(3, "Jile", 6));
+		npcList.add(new TestNPC(4, "Lara", 75));
+		npcList.add(new TestNPC(5, "Mireen", 23));
+	}
+
+	public List<TestNPC> getNpcList() {
+		return npcList;
+	}
+
+	public void setNpcList(List<TestNPC> npcList) {
+		this.npcList = npcList;
+	}
+	
+	
+
+}

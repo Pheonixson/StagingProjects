@@ -1,0 +1,10 @@
+package com.nix.dnd5sim;
+
+@SpringBootApplication
+public class App 
+{
+    public static void main( String[] args )
+    {
+        SpringApplication.run(App.class, args);
+    }
+}

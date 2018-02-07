@@ -1,0 +1,87 @@
+package com.nix.dnd5sim.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Component
+@Entity
+@Table(name="TESTNPCS")
+public class TestNpc implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7556897743407521209L;
+
+	@Id
+	@Column(name = "TESTNPC_ID")
+	@SequenceGenerator(allocationSize = 1, initialValue = 1, name="testNpcSeq", sequenceName="TESTNPC_SEQ")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="testNpcSeq")
+	private Integer id;
+	
+	@Column(name = "TESTNPC_NAME")
+	private String name; 
+
+	@Column(name = "TESTNPC_MONEY")
+	private int money;
+	
+	public TestNpc() {
+		super();
+	}
+
+	public TestNpc(String name, int money) {
+		super();
+		this.name = name;
+		this.money = money;
+	}
+
+	public TestNpc(Integer id, String name, int money) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.money = money;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public String toString() {
+		return "TestNpc [id=" + id + ", name=" + name + ", money=" + money + "]";
+	}
+
+}
